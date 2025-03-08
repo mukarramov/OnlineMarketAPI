@@ -1,3 +1,4 @@
+using System.Data.SqlTypes;
 using Microsoft.AspNetCore.Mvc;
 using OnlineMarket.Interface;
 using OnlineMarket.Models;
@@ -29,5 +30,29 @@ public class UserController : ControllerBase
             Role = role
         };
         return Task.FromResult(newUser);
+    }
+
+    [HttpGet]
+    public async Task<IEnumerable<Users?>> GetAll()
+    {
+        return await _userService.GetAll();
+    }
+
+    [HttpGet]
+    public async Task<Users> GetById(int id)
+    {
+        return await _userService.GetById(id);
+    }
+
+    [HttpPut]
+    public async Task<bool> Update(int id, string name, string email, string password, Role role)
+    {
+        return await _userService.Update(id, name, email, password, role);
+    }
+
+    [HttpDelete]
+    public async Task<bool> Delete(int id)
+    {
+        return await _userService.Delete(id);
     }
 }

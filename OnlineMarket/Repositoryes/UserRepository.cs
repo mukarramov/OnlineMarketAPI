@@ -59,4 +59,22 @@ public class UserRepository : IUserRepository
     {
         return await _context.Users.FirstOrDefaultAsync(x => x.Id == userId);
     }
+
+    public async Task<Users?> GetByUsernameAsync(string username)
+    {
+        return await _context.Users.FirstOrDefaultAsync(x => x.Name == username);
+    }
+
+    public async Task<bool> ExistsAsync(string email)
+    {
+        return await _context.Users.AnyAsync(x => x.Email == email);
+    }
+
+    public async Task AddAsyncFromBody(Users user)
+    {
+        string hashPassword = BCrypt.Net.BCrypt.HashPassword(user.PasswordHash);
+        user.PasswordHash = hashPassword;
+        await _context.Users.AddAsync(user);
+        await _context.SaveChangesAsync();
+    }
 }

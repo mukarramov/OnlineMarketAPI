@@ -1,3 +1,10 @@
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using OnlineMarket.Common;
+using OnlineMarket.Configuration;
 using OnlineMarket.Interface;
 using OnlineMarket.Models;
 using OnlineMarket.Models.Enums;
@@ -8,10 +15,12 @@ namespace OnlineMarket.Services;
 public class UserService : IUserService
 {
     private readonly IUserRepository _userRepository;
+    private readonly IConfiguration _configuration;
 
-    public UserService(IUserRepository userRepository)
+    public UserService(IUserRepository userRepository, IConfiguration configuration)
     {
         _userRepository = userRepository;
+        _configuration = configuration;
     }
 
     public async Task<Users?> Create(string name, string email, string password, Role role)

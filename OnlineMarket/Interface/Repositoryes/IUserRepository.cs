@@ -11,4 +11,7 @@ public interface IUserRepository
     void Update(Users users);
     void DeleteAsync(int userId);
     Task<Users?> GetByIdAsync(int userId);
+    Task<Users?> GetByUsernameAsync(string username);
+    Task<bool> ExistsAsync(string email);
+    Task AddAsyncFromBody(Users user);
 }

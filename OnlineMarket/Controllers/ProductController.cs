@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OnlineMarket.Interface;
 using OnlineMarket.Models;
@@ -27,10 +28,11 @@ public class ProductController : ControllerBase
             CategoryId = categoryId,
             Category = category
         };
-        return Task.FromResult(newProduct);
+        return Task.FromResult(newProduct); 
     }
 
     [HttpGet]
+    [Authorize(Roles = "admin")]
     public async Task<IEnumerable<Product?>> GetAll()
     {
         return await _productService.GetAll();
