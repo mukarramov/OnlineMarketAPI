@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bobo\\source\\repos\\all-folder\\C#\\API\\OnlineMarket\\OnlineMarket\\OnlineMarket.csproj": {}
+    "C:\\Users\\Alisher Olimov\\RiderProjects\\OnlineMarketAPI\\OnlineMarket\\OnlineMarket.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bobo\\source\\repos\\all-folder\\C#\\API\\OnlineMarket\\OnlineMarket\\OnlineMarket.csproj": {
+    "C:\\Users\\Alisher Olimov\\RiderProjects\\OnlineMarketAPI\\OnlineMarket\\OnlineMarket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bobo\\source\\repos\\all-folder\\C#\\API\\OnlineMarket\\OnlineMarket\\OnlineMarket.csproj",
+        "projectUniqueName": "C:\\Users\\Alisher Olimov\\RiderProjects\\OnlineMarketAPI\\OnlineMarket\\OnlineMarket.csproj",
         "projectName": "OnlineMarket",
-        "projectPath": "C:\\Users\\bobo\\source\\repos\\all-folder\\C#\\API\\OnlineMarket\\OnlineMarket\\OnlineMarket.csproj",
-        "packagesPath": "C:\\Users\\bobo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bobo\\source\\repos\\all-folder\\C#\\API\\OnlineMarket\\OnlineMarket\\obj\\",
+        "projectPath": "C:\\Users\\Alisher Olimov\\RiderProjects\\OnlineMarketAPI\\OnlineMarket\\OnlineMarket.csproj",
+        "packagesPath": "C:\\Users\\Alisher Olimov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alisher Olimov\\RiderProjects\\OnlineMarketAPI\\OnlineMarket\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\bobo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Alisher Olimov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -36,8 +43,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        }
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -49,7 +57,7 @@
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[9.0.2, )"
+              "version": "[8.0.0, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
@@ -57,17 +65,25 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[9.0.2, )"
+              "version": "[9.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.2, )"
+              "version": "[9.0.1, )"
+            },
+            "Microsoft.IdentityModel.JsonWebTokens": {
+              "target": "Package",
+              "version": "[8.6.1, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[9.0.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL.Design": {
+              "target": "Package",
+              "version": "[1.1.0, )"
             },
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",
@@ -101,7 +117,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
